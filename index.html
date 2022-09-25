@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Notes App</title>
+</head>
+<body>
+    <header>
+        <div class="page-wrapper">
+            <div class="nav-wrapper">
+             <div class="grad-bar"></div>
+             <nav class="navbar">
+               <img src="https://cdn-icons-png.flaticon.com/512/869/869604.png" alt="Company Logo"/>
+               <div class="menu-toggle" id="mobile-menu">
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+               </div>
+               <ul class="nav no-search">
+                 <li class="nav-item"><a href="#">DevNest Notes</a></li>
+                 <!-- <li class="nav-item"><a href="#">About</a></li>
+                 <li class="nav-item"><a href="#">Work</a></li>
+                 <li class="nav-item"><a href="#">Careers</a></li>
+                 <li class="nav-item"><a href="#">Contact Us</a></li>
+                 <i class="fas fa-search" id="search-icon"></i>
+                 <input class="search-input" type="text" placeholder="Search.."> -->
+               </ul>
+             </nav>
+             </div>
+            
+           </div>
+    </header>
+    
+    <div style="margin-top: 10px;">Add Notes App
+        <h2 class="type-writer-text"><span>A</span>dd / <span>C</span>opy / <span>B</span>old / <span>U</span>nderline </h2>
+    </div>
+
+    <main>
+       <section>
+          <div >
+           <div>
+                <!-- <input id="title" type="text" value="" placeholder="title"> -->
+                <textarea id="note"  placeholder="note" >Join our discord and be part of an amazing student community Experience the most active learning community; Join our discord to experience Peer learning, and interact with like minded folks.</textarea>
+                <div style="display: flex;align-items-center:center;justify-content:center;">
+                    <button onclick="addNote()">Add</button>
+                    <button onclick="copyNote()">Copy</button>
+                    <button id="boldToggle" onclick="boldNote()">Bold</button>
+                    <button id="underlineToggle" onclick="underlineNote()">Underline</button>
+                </div>
+               
+
+            </div>
+            <h1 style="margin-top: 5px;padding: 10px;">My Notes List</h1>
+            <div class="allnote"></div>
+
+
+          </div>
+       </section>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
