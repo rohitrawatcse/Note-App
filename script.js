@@ -1,15 +1,5 @@
-// const noteText = document.querySelector("#note");
-// 
-// function underlineNote(){
-    // const note = document.querySelector("#note");
-    // let text = note.value
-    // let selection = window.getSelection();
-    // let boldText = "<u>" + selection + "</u>"
-    // note.value = text.replace(selection, boldText)   
-// }
 const note = document.querySelector("#note");
 const allnote = document.querySelector(".allnote");
-
 
 function addNote(){
     let card = `<div class="note">
@@ -28,23 +18,26 @@ function addNote(){
     copyArr.forEach( function copyBtn(e) {
         e.addEventListener("click",copyNote)
     })
-    function copyNote(f) {
-        const element = f.currentTarget.parentElement;
+    function copyNote(btn) {
+        const element = btn.currentTarget.parentElement;
         navigator.clipboard.writeText(element.textContent);
     }
 }
 
-// function boldNote(){
-    // const note = document.querySelector("#note")
-// 
-    // let text = note.value;
-    // let selection = window.getSelection();
-    // let boldText = "<b>" + selection + "</b>"
-    // note.value = text.replace(selection, boldText) 
-// 
-// }
+function boldNote(){
+    let text = note.value;
+    let selection = window.getSelection().toString();
+    let boldText = "<b>" + selection + "</b>"
+    note.value = text.replace(selection, boldText) 
 
+}
 
+function underlineNote(){
+    let text = note.value
+    let selection = window.getSelection();
+    let underText = "<u>" + selection + "</u>"
+    note.value = text.replace(selection, underText)   
+}
 
 
 
