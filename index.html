@@ -8,24 +8,17 @@
     <title>Notes App</title>
   </head>
   <body>
-    <!-- <div style="margin-top: 10px"> -->
-    <!-- Add Notes App -->
-    <!-- <h2 class="type-writer-text"> -->
-    <!-- <span>A</span>dd / <span>C</span>opy / <span>B</span>old / -->
-    <!-- <span>U</span>nderline -->
-    <!-- </h2> -->
-    <!-- </div> -->
-
     <main>
       <section>
         <div>
           <div>
             <!-- <input id="title" type="text" value="" placeholder="title"> -->
-            <textarea id="note" placeholder="note" required>community</textarea>
+            <input type="text" name="title" id="title" placeholder="title" />
+            <textarea id="note" placeholder="note"></textarea>
             <div>
               <button onclick="addNote()">Add</button>
               <button id="boldToggle" onclick="boldNote()">Bold</button>
-              <button id="underlineToggle" onclick="underlineNote()">
+              <button id="underlineToggle" onclick="underLineNote()">
                 Underline
               </button>
             </div>
