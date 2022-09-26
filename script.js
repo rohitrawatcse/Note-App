@@ -4,13 +4,13 @@ const allnote = document.querySelector(".allnote");
 
 function addNote(){
     let card = `<div class="note">
-                    <div>
+                    <div class="dinline">
                         <p class="title-text">${title.value}</p>
-                        <button class="copy-btn"><img src="https://img.icons8.com/material-sharp/24/000000/copy.png"/></button>
+                        <button class="copy-btn cpy"><img class="icon" src="https://img.icons8.com/material-sharp/24/000000/copy.png"/></button>
                     </div>
-                    <div>
+                    <div class="dinline">
                         <p class="note-text">${note.value}</p>
-                        <button class="copy-btn"><img src="https://img.icons8.com/material-sharp/24/000000/copy.png"/></button>
+                        <button class="copy-btn cpy"><img class="icon" src="https://img.icons8.com/material-sharp/24/000000/copy.png"/></button>
                     </div>
                 </div>`;
     if (note.value=="") {
