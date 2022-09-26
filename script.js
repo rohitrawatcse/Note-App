@@ -1,13 +1,6 @@
 const note = document.querySelector("#note");
 const title = document.querySelector("#title")
 const allnote = document.querySelector(".allnote");
-const parentForm = document.querySelector(".parent-form")
-const addBtn = document.querySelector(".add-btn")
-
-
-addBtn.addEventListener("click", function addParent(){
-    parentForm.classList.remove("hide-form");
-})
 
 function addNote(){
     let card = `<div class="note">
@@ -26,7 +19,6 @@ function addNote(){
         allnote.innerHTML += card;
     }
 
-    parentForm.classList.add("hide-form")
     note.value = "";
     title.value ="";
     
