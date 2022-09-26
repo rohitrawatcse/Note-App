@@ -10,29 +10,39 @@
 const note = document.querySelector("#note");
 const allnote = document.querySelector(".allnote");
 
-const copyBtn = document.querySelector(".copy-btn");
 
 function addNote(){
     let card = `<div class="note">
                     <p class="note-text">${note.value}</p>
                     <button class="copy-btn"><img src="https://img.icons8.com/material-sharp/24/000000/copy.png"/></button>
                 </div>`;
-    allnote.innerHTML += card;
+    if (note.value=="") {
+        note.value ="note"
+    } else {
+        allnote.innerHTML += card;
+    }
     note.value = "";
+
+    var cards = allnote.childNodes;
+    // console.log(cards.length)
+
+    const alnote = document.querySelectorAll(".allnote");
+    const ele = []
+    
+    for (let i=0;i<cards.length; i++) {
+        // console.log(cards[i])
+        const copyBtn = document.querySelector(".copy-btn")
+        copyBtn.addEventListener("click",function hello() {
+            console.log(cards[i])
+        });
+
+        // function copyNote(e) {
+            // const element = e.currentTarget.parentElement;
+            // navigator.clipboard.writeText(element.textContent);
+        // }
+    }
 }
 
-// function copyNote() {
-let cards = allnote.childNodes;
-console.log(cards)
-cards.forEach( function cardList(current){
-    // const cp = current.childNodes[3].getAttribute('class');
-    copyBtn.addEventListener("click",function nope(){
-        console.log("hello");
-    })
-})
-    // const noteText = document.querySelector(".note-text");
-    // navigator.clipboard.writeText(noteText.textContent);
-// }
 // function boldNote(){
     // const note = document.querySelector("#note")
 // 
@@ -42,10 +52,6 @@ cards.forEach( function cardList(current){
     // note.value = text.replace(selection, boldText) 
 // 
 // }
-
-
-
-
 
 
 
