@@ -8,24 +8,31 @@
     <title>Notes App</title>
   </head>
   <body>
-    <main>
-      <section>
-        <div>
-          <div>
+    <!-- Header -->
+    <header class="header">
+      <h1>hecker group</h1>
+    </header>
+    <!-- Main -->
+    <main class="main">
+      <!-- section -->
+      <section class="container">
+        <div class="parent-form hide-form">
+          <div class="form">
             <!-- <input id="title" type="text" value="" placeholder="title"> -->
-            <input type="text" name="title" id="title" placeholder="title" />
+            <input id="title" type="text" name="title" placeholder="title" />
             <textarea id="note" placeholder="note"></textarea>
+
             <div>
               <button onclick="addNote()">Add</button>
-              <button id="boldToggle" onclick="boldNote()">Bold</button>
-              <button id="underlineToggle" onclick="underLineNote()">
-                Underline
-              </button>
             </div>
+            <button id="boldToggle" onclick="boldNote()">Bold</button>
+            <button id="underlineToggle" onclick="underLineNote()">
+              Underline
+            </button>
           </div>
-          <h1 style="margin-top: 5px; padding: 10px">My Notes List</h1>
-          <div class="allnote"></div>
         </div>
+        <h1 class="">My Notes List</h1>
+        <div class="allnote"></div>
       </section>
     </main>
 
