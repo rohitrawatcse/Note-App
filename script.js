@@ -23,23 +23,14 @@ function addNote(){
     }
     note.value = "";
 
-    var cards = allnote.childNodes;
-    // console.log(cards.length)
-
-    const alnote = document.querySelectorAll(".allnote");
-    const ele = []
-    
-    for (let i=0;i<cards.length; i++) {
-        // console.log(cards[i])
-        const copyBtn = document.querySelector(".copy-btn")
-        copyBtn.addEventListener("click",function hello() {
-            console.log(cards[i])
-        });
-
-        // function copyNote(e) {
-            // const element = e.currentTarget.parentElement;
-            // navigator.clipboard.writeText(element.textContent);
-        // }
+    var copyBtn = document.querySelectorAll(".copy-btn")
+    var copyArr = [...copyBtn]
+    copyArr.forEach( function copyBtn(e) {
+        e.addEventListener("click",copyNote)
+    })
+    function copyNote(f) {
+        const element = f.currentTarget.parentElement;
+        navigator.clipboard.writeText(element.textContent);
     }
 }
 
